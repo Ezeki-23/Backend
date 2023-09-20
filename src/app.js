@@ -13,7 +13,11 @@ app.use((req, res, next) => {
     next();
 })
 
-app.use(cors());
+app.use(cors({
+    credentials: true,
+    origin: 'http://localhost:5173'
+})
+);
 
 app.use(morgan('dev')); 
 app.use(express.json());
