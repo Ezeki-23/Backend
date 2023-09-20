@@ -6,7 +6,7 @@ const cors = require('cors');
 connectDB(); 
 
 app.use(cors({
-    origin: 'https://ezekiel-dev.netlify.app/'
+    origin: 'https://ezekiel-dev.netlify.app'
 }));
 
 app.listen(3000)
