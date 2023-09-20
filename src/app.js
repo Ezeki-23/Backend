@@ -24,7 +24,7 @@ app.use((req, res, next) => {
 
 app.use(cors({
     credentials: true,
-    origin: 'http://127.0.0.1:27017'
+    origin: 'https://ezekiel-dev.netlify.app/'
 })
 );
 
