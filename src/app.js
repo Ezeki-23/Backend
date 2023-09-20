@@ -7,7 +7,17 @@ import authRoutes from './routes/auth.routes.js';
 
 const app = express();
 
-app.use(cors());
+app.use((req, res, next) => {
+    res.append('Access-Control-Allow-Origin', ['*']);
+    res.append('Access-Control-Allow-Methods', 'get, put, post, delete');
+    next();
+})
+
+app.use(cors({
+    credentials: true,
+    origin: 'https://ezekiel-dev.netlify.app/'
+})
+);
 
 app.use(morgan('dev')); 
 app.use(express.json());
