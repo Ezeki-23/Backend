@@ -15,7 +15,7 @@ app.use((req, res, next) => {
 })
 
 app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5173');
+  res.setHeader('Access-Control-Allow-Origin', 'https://ezekiel-dev.netlify.app');
   res.setHeader('Access-Control-Allow-Methods', 'get, put, post, delete');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   res.setHeader('Access-Control-Allow-Credentials', true);
@@ -24,7 +24,7 @@ app.use((req, res, next) => {
 
 app.use(cors({
     credentials: true,
-    origin: 'https://ezekiel-dev.netlify.app/'
+    origin: 'https://ezekiel-dev.netlify.app'
 })
 );
 
