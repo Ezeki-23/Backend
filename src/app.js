@@ -3,14 +3,12 @@ import morgan from 'morgan';
 import cookieParser from 'cookie-parser'
 import cors from 'cors'
 
-const express = require("express");
-const cors = require("cors");
-
 import authRoutes from './routes/auth.routes.js';
 
 const corsOptions = {
   credentials: true,
-  origin: 'https://ezekiel-dev.netlify.app'
+  origin: 'https://ezekiel-dev.netlify.app',
+  methods: 'get, post',
 };
 
 const app = express();
