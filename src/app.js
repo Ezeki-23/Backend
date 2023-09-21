@@ -5,12 +5,14 @@ import cors from 'cors'
 
 import authRoutes from './routes/auth.routes.js';
 
-const app = express();
-
-app.use(cors({
+const corsOptions = {
   credentials: true,
   origin: 'https://ezekiel-dev.netlify.app'
-}));
+};
+
+const app = express();
+app.use(cors(corsOptions));
+
 app.use(morgan('dev')); 
 app.use(express.json());
 app.use(cookieParser());
