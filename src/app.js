@@ -8,10 +8,9 @@ import authRoutes from './routes/auth.routes.js';
 const app = express();
 
 app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', ['*']);
-    res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE');
-    res.header('Access-Control-Allow-Headers', 'Content-Type');
-    res.header('Access-Control-Allow-Credentials', true);
+    res.append('Access-Control-Allow-Origin', ['*']);
+    res.append('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE');
+    res.append('Access-Control-Allow-Credentials', true);
     next();
 })
 
