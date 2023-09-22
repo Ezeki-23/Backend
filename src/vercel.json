@@ -10,7 +10,8 @@
                    {"Access-Control-Allow-Credentials", "true"}
       }
     ]
-    {
+}
+{
  "headers": [
     {
       "source": "/api/(.*)",
@@ -22,5 +23,4 @@
       ]
     }
   ]
-}
 }
