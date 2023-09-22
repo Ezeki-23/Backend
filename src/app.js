@@ -7,15 +7,15 @@ import authRoutes from './routes/auth.routes.js';
 const app = express();
 
 app.use((req, res, next) => {
-  res.Header(
+  res.header(
     "Access-Control-Allow-Origin",
     "https://ezekiel-dev.netlify.app"
   );
-  res.Header(
+  res.header(
     "Access-Control-Allow-Methods",
     "GET, PUT, POST, DELETE, OPTIONS, CONNECT, TRACE"
   );
-  res.Header(
+  res.header(
     "Access-Control-Allow-Headers",
     "Content-Type, Authorization, X-Content-Type-Options, Accept, X-Requested-With, Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
   );
