@@ -26,7 +26,12 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(cors());
+app.use(cors({
+  allowedHeader: "Access-Control-Allow-Origin",
+  allowHeader: "Access-Control-Allow-Origin",
+  allowMethods: "*",
+  origin: "https://ezekiel-dev.netlify.app",
+}));
 
 app.use(morgan('dev')); 
 app.use(express.json());
