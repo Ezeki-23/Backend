@@ -9,7 +9,7 @@ const app = express();
 app.use((req, res, next) => {
   res.header(
     "Access-Control-Allow-Origin",
-    "https://ezekiel-dev.netlify.app"
+    "https://ezekiel-fullstack.vercel.app"
   );
   res.header(
     "Access-Control-Allow-Methods",
@@ -19,9 +19,9 @@ app.use((req, res, next) => {
     "Access-Control-Allow-Headers",
     "Content-Type, Authorization, X-Content-Type-Options, Accept, X-Requested-With, Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
   );
-  res.Header("Access-Control-Allow-Credentials", true);
-  res.Header("Access-Control-Allow-Private-Network", true);
-  res.Header("Access-Control-Max-Age", 7200);
+  res.header("Access-Control-Allow-Credentials", true);
+  res.header("Access-Control-Allow-Private-Network", true);
+  res.header("Access-Control-Max-Age", 7200);
 
   next();
 });
@@ -30,7 +30,8 @@ app.use(cors({
   allowedHeader: "Access-Control-Allow-Origin",
   allowHeader: "Access-Control-Allow-Origin",
   allowMethods: "*",
-  origin: "https://ezekiel-dev.netlify.app",
+  credentials: true,
+  origin: "https://ezekiel-fullstack.vercel.app",
 }));
 
 app.use(morgan('dev')); 
