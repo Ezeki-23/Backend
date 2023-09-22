@@ -4,25 +4,24 @@ import cookieParser from 'cookie-parser'
 import cors from 'cors'
 import authRoutes from './routes/auth.routes.js';
 
-const express = require("express");
 const app = express();
 
 app.use((req, res, next) => {
-  res.setHeader(
+  res.Header(
     "Access-Control-Allow-Origin",
     "https://ezekiel-dev.netlify.app"
   );
-  res.setHeader(
+  res.Header(
     "Access-Control-Allow-Methods",
     "GET, PUT, POST, DELETE, OPTIONS, CONNECT, TRACE"
   );
-  res.setHeader(
+  res.Header(
     "Access-Control-Allow-Headers",
     "Content-Type, Authorization, X-Content-Type-Options, Accept, X-Requested-With, Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
   );
-  res.setHeader("Access-Control-Allow-Credentials", true);
-  res.setHeader("Access-Control-Allow-Private-Network", true);
-  res.setHeader("Access-Control-Max-Age", 7200);
+  res.Header("Access-Control-Allow-Credentials", true);
+  res.Header("Access-Control-Allow-Private-Network", true);
+  res.Header("Access-Control-Max-Age", 7200);
 
   next();
 });
