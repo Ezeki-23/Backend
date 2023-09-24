@@ -4,8 +4,15 @@ import express from "express";
 
 connectDB(); 
 
-const cors = require('cors');    
+const express = require('express');
 const app = express();
+const cors = require('cors');   
+
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', '*');
+  next();
+});
 
 app.use(cors({credentials: true, origin: 'https://ezekiel-dev.netlify.app'}));
 
