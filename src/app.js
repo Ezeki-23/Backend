@@ -16,7 +16,8 @@ app.use((req, res, next) => {
 
 app.use(cors({
   credentials: "true",
-  origin: "https://ezekiel-dev.netlify.app"
+  origin: "https://ezekiel-dev.netlify.app",
+  methods: ["GET", "POST"]
 }));
 
 app.use(morgan('dev')); 
