@@ -12,7 +12,7 @@
             "dest": "./index.js",
             "headers": {
                 "Access-Control-Allow-Origin": "https://ezekiel-dev.netlify.app",
-                "Access-Control-Allow-Credentials": "false"
+                "Access-Control-Allow-Credentials": "true"
             }
         }
     ]
