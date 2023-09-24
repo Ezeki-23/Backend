@@ -13,12 +13,11 @@ app.use(function(req, res, next) {
 });
 
 app.use(cors({
-    credentials: true, 
-    origin: 'https://ezekiel-dev.netlify.app'
+    origin: 'https://ezekiel-dev.netlify.app',
+    methods: ["POST", "GET"],
+    credentials: true
     })
 );
-
-app.options('*', cors());
 
 app.use(morgan('dev')); 
 app.use(express.json());
