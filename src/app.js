@@ -10,7 +10,8 @@ app.use((req, res, next) => {
     res.append('Access-Control-Allow-Origin', 'https://ezekiel-dev.netlify.app/');
     res.append('Access-Control-Allow-Methods', 'get, put, post, delete');
     next();
-})
+    }
+)
 
 app.use(cors({
     credentials: true, 
