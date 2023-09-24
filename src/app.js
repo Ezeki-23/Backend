@@ -6,6 +6,12 @@ import authRoutes from './routes/auth.routes.js';
 
 const app = express();
 
+app.use((req, res, next) => {
+    res.append('Access-Control-Allow-Origin', ['*']);
+    res.append('Access-Control-Allow-Methods', 'get, put, post, delete');
+    next();
+})
+
 app.use(cors());
 
 app.use(morgan('dev')); 
