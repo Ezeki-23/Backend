@@ -19,7 +19,7 @@
             }, "continue": true
            }, 
            {
-            "src": "/controllers/auth.controller", "methods": ["POST", "GET"], "dest": "index.js"
+            "src": "/controllers", "methods": ["POST", "GET"], "dest": "auth.controller.js"
            }
     ]
 }
